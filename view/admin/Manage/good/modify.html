@@ -1,0 +1,39 @@
+<form action="modify.php?m=yes&id=<?php echo $id; ?>" method="post">
+    <div>名称 <input type="text" name="name" value="<?php echo $old['name']; ?>"></div>
+    <div>价格 <input type="text" name="price" value="<?php echo $old['price']; ?>"></div>
+    <div>库存 <input type="text" name="store" value="<?php echo $old['store_count']; ?>"></div>
+    <div>销量 <input type="text" name="sale_count" value="<?php echo $old['sale_count']; ?>"></div>
+    <div>分类
+        <select name="category">
+            <?php
+            $result = $db->query("SELECT name FROM category WHERE id='$cat_id'");
+            $name = $result->fetch_assoc();
+            echo "<option value=".$cat_id.">".
+            $name['name']."</option>";
+
+            $result = $db->query("SELECT * FROM category WHERE id<>'$cat_id'");
+            while($category = $result->fetch_assoc()) {
+            echo "<option value=".$category['id'].">".
+            $category['name']."</option>";
+            }
+            ?>
+        </select>
+    </div>
+    <div>品牌
+        <select name="brand">
+            <?php
+                $result = $db->query("SELECT name FROM brand WHERE id='$brand_id'");
+            $name = $result->fetch_assoc();
+            echo "<option value=".$brand_id.">".
+            $name['name']."</option>";
+
+            $result = $db->query("SELECT * FROM brand WHERE id<>'$brand_id'");
+            while($brand = $result->fetch_assoc()) {
+            echo "<option value=".$brand['id'].">".
+            $brand['name']."</option>";
+            }
+            ?>
+        </select>
+        <div><input type="submit" value="提交修改"></div>
+    </div>
+</form>
