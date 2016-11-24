@@ -1,6 +1,6 @@
 <?php
     require_once 'public/header.php';
-    require_once 'view/user/index/top.php';
+    require_once 'view/user/index/search_filed.php';
     require_once 'conf/db.php';
 
     $query = addslashes($_GET['q']);
