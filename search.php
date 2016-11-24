@@ -9,7 +9,7 @@
     if ($cat == 'all') {
         $result = $db->query("SELECT * FROM good WHERE name LIKE '%".$query."%'") or die("查询失败");
     } else {
-        $result = $db->query("SELECT * FROM good WHERE name LIKE '%".$query."%' AND category_id='$cat'") or die("查询失败");
+        $result = $db->query("SELECT * FROM good  WHERE name LIKE '%".$query."%' AND category_id='$cat'") or die("查询失败");
     }
     
     if (!$result->num_rows) {
