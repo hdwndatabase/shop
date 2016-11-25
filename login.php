@@ -2,7 +2,7 @@
     session_start();
     require_once './public/header.php';
     if (isset($_SESSION['user'])) {
-        echo "<h2>欢迎你,".$_SESSION['user']."</h2>";
+        echo "<h2 class='msg'>欢迎你,".$_SESSION['user']."</h2>";
     } else {
         require_once './conf/db.php';
         if (!empty(@$_POST['username'] && !empty(@$_POST['password']))) {

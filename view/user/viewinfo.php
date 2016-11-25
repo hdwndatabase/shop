@@ -7,8 +7,8 @@
     $result = $db->query("SELECT name,addr,phone,email,zipcode FROM user WHERE name='$name'");
     $elems = $result->fetch_assoc();
 ?>
-<h2>用户个人信息</h2>
-<table border="1px">
+<h2 class="h">用户个人信息</h2>
+<table border="1px" class="info">
     <tr>
         <td>用户名</td>
         <td><?php echo $elems['name'] ?></td>
