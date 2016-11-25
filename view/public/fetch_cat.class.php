@@ -8,7 +8,7 @@
 
         //显示分类的下拉列表
         function display_select() {
-            echo "<select name='cat'>";
+            echo "<select name='cat' class='sel'>";
             echo "<option value='all'>全部</option>";
             while($category = $this->result->fetch_assoc()) {
                 echo "<option value=".$category['id'].">".
@@ -20,7 +20,7 @@
         //显示搜索结果中的分类选择
         function display_bar() {
             $query = $_GET['q'];
-            echo "<div><ul>";
+            echo "<div class='cat'><ul class='cat'>";
             while($category = $this->result->fetch_assoc()) {
                 ?>
                 <li><a href="search.php?q=<?php echo $query.'&catId='.$category['id'];?>"><?php echo $category['name']; ?></a></li>

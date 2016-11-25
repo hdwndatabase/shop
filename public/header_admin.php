@@ -82,6 +82,7 @@
                         <li><a href="/shop/logout.php">注销</a></li>
                     </ul>
                 </div>
+            </div>
             <?php
         } else {
             ?>

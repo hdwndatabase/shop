@@ -4,7 +4,7 @@
     if (isset($_SESSION['registered'])) {
         $_SESSION = array();
         session_destroy();
-        echo "<h2>注册成功！请<a href='./login.php'>登陆</a></h2>";
+        echo "<h2 class='msg'>注册成功！请<a href='./login.php' class='login_link'>登陆</a></h2>";
     } else {
         if (!empty($_POST["username"]) && !empty($_POST["pwd"]) &&
             !empty($_POST["tel"]) && !empty($_POST["email"]) ) {
@@ -16,7 +16,7 @@
 
             $result = $db->query("SELECT * FROM user WHERE name='$username'");
             if ($result->num_rows) {
-                echo "<p>注册失败!用户名已存在<p>";
+                echo "<p class='ref_fail'>注册失败!用户名已存在<p>";
                 header('Location: ./view/user/logfail.php');
                 exit;
             }

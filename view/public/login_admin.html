@@ -4,16 +4,198 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="./public/css/style.css">
+    <style type="text/css">
+    *{
+    	padding:0px;
+    	margin:0px;
+    	list-style: none;
+    	text-decoration: none;
+    }
+    /*最顶部区域*/
+    #top{
+		padding:0px;
+		margin:0px;
+		font-size: 12px;
+		color:rgb(128,128,128);
+		list-style: none;
+	}
+	#top a{
+		text-decoration: none;
+		color:rgb(128,128,128);
+	}
+	#top{
+		width:100%;
+		height:33px;
+		background: url(/shop/public/images/background.gif) repeat-x;
+	}
+	#top #top_center{
+		width:1200px;
+		height:31px;
+		margin:0 auto;
+	}
+	/*最顶部左侧区域*/
+	#top #top_center #top_center_left{
+		float:left;
+	}
+	#top #top_center #top_center_left .welcome{
+		line-height: 31px;
+		float:left;
+	}
+	#top #top_center #top_center_left .login{
+		float:left;
+		line-height: 31px;
+		padding-left:14px;
+		padding-right: 14px;
+	}
+	#top #top_center #top_center_left .login a{
+		color:rgb(128,128,128);
+	}
+	#top #top_center #top_center_left .dingdan,#top #top_center #top_center_left .shoucang{
+		line-height: 31px;
+		float:left;
+		padding-right:15px;
+	}
+	/*最顶部左侧区域结束*/
+	/*最顶部右侧区域*/
+	#top #top_center #top_center_right{
+		float:right;
+	}
+	#top #top_center #top_center_right li{
+		float:left;
+	}
+	#top #top_center #top_center_right li.first{
+		line-height: 31px;
+		background:url(../../public/images/background.png) no-repeat 58px 10px;
+		padding-right:15px;
+		padding-left:10px;
+	}
+	#top #top_center #top_center_right li.shoujifanke{
+		line-height: 31px;
+		background:url(/shop/public/images/background.png) no-repeat 62px -21px;
+		padding-right:16px;
+		padding-left:10px;
+	}
+	#top #top_center #top_center_right li.zaixiankefu{
+		line-height: 31px;
+		padding-left: 10px;
+	}
+	#top #top_center #top_center_right li.picture{
+		padding-top: 7px;
+		padding-left:5px;
+	}
+	#top #top_center #top_center_right li.wechat{
+		width:18px;
+		height: 18px;
+		background:url(/shop/public/images/wechat.bmp) no-repeat;
+		margin-top: 7px;
+		margin-left:92px;
+		margin-right:2px;
+	}
+	#top #top_center #top_center_right li.weibo{
+		width:18px;
+		height:18px;
+		background:url(/shop/public/images/weibo.bmp) no-repeat;
+		margin-top: 7px;
+	}
+	/*最顶部右侧区域结束*/
+/*最顶部区域结束*/
+	.form{
+	}
+	.all{
+		width:100%;
+		height:605px;
+		background: url(background.jpg) repeat;
+	}
+	.form{
+		width:25%;
+		height:320px;
+		padding-left: 30px;
+		padding-top: 40px;
+		position: relative;
+		left:80px;
+		top:60px;
+	}
+	.form input[type="text"]{
+		width:260px;
+		height:37px;
+		margin-bottom: 25px;
+	}
+	.form input[type="password"]{
+		width:260px;
+		height:37px;
+		margin-bottom: 25px;
+		margin-left: 15px;
+	}
+	.form input[type="submit"]{
+		margin-left: 50px;
+		width:270px;
+		height: 42px;
+	    border: 0;
+	    display: inline-block;
+	    overflow: hidden;
+	    vertical-align: middle;
+	    line-height: 42px;
+	    font-size: 16px;
+	    font-weight: 700;
+	    color: #fff;
+	    background: #f40;
+	    border-radius: 3px;
+	    cursor: pointer;
+	    zoom: 1;
+	    margin-bottom: 50px;
+	}
+	.form #wangjimima {
+		width:150px;
+		margin-left: 200px;
+		font-size: 15px;
+		text-decoration: none;
+	}
+    </style>
+
 
 </head>
 <body>
+<!-- 最顶部区域 -->
+	<div id="top">
+		<div id="top_center">
+			<!-- 顶部左侧区域 -->
+			<div id="top_center_left">
+				<p class="welcome">您好，欢迎光临购物系统！</p>
+				<p class="login"><a href="">登录</a> | <a href="">注册</a></p>
+				<a href="" class="dingdan">我的订单</a>
+				<a href="" class="shoucang">收藏本站</a>
+			</div>
+			<!-- 顶部左侧区域结束 -->
+
+			<!-- 顶部右侧区域 -->
+			<div id="top_center_right">
+				<ul>
+					<li class="first"><a href="">我的系统</a></li>
+					<li class="first"><a href="">帮助中心</a></li>
+					<li class="first"><a href="">网站公告</a></li>
+					<li class="shoujifanke"><a href="">手机系统</a></li>
+					<li class="zaixiankefu"><a href="">在线客服</a></li>
+					<li class="picture"><img src="image/kefu.bmp"></li>
+					<li class="wechat"></li>
+					<li class="weibo"></li>
+				</ul>
+			</div>
+			<!-- 顶部右侧区域结束 -->
+		</div>
+	</div>
+<!-- 最顶部区域结束 -->
+<div class="all">
 <div class="form">
     <form action="admin.php" method="post">
         <div>用户名 <input type="text" name="username"></div>
         <div>密码 <input type="password" name="password"></div>
         <div><input type="submit" value="登陆"></div>
     </form>
-
+    <div id="wangjimima">
+		<a href="">忘记密码</a>
+		<a href="">免费注册</a>
+	</div>
+</div>
 </div>
 </body>
 </html>
