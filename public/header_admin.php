@@ -90,6 +90,5 @@
             <?php
         }
     ?>
-</div>
 </body>
 </html>
