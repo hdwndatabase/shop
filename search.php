@@ -15,7 +15,7 @@
     if (!$result->num_rows) {
         require_once 'view/public/search/searchErr.html';
     } else {
-        require_once
+        require_once 'view/public/search/search_result.php';
     }
     
     
