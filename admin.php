@@ -15,15 +15,12 @@
         background: url(background.jpg) repeat;
     }
     .form{
-        width:25%;
-        height:320px;
+        height:350px;
         padding-left: 30px;
         padding-top: 40px;
         position: relative;
         left:80px;
         top:60px;
-        border-color: red;
-        border-style: solid;
     }
     .form input[type="text"]{
         width:260px;
@@ -34,10 +31,9 @@
         width:260px;
         height:37px;
         margin-bottom: 25px;
-        margin-left: 15px;
     }
     .form input[type="submit"]{
-        margin-left: 50px;
+        margin-left: 9px;
         width:270px;
         height: 42px;
         border: 0;
@@ -53,14 +49,14 @@
         cursor: pointer;
         zoom:  1;
         margin-bottom: 50px;
+        text-align: center;
     }
     .form #wangjimima {
+        float: right;
         width:150px;
-        margin-left: 200px;
+        margin-left: 150px;
         font-size: 15px;
         text-decoration: none;
-        border-color: red;
-        border-style: solid;
     }
     </style>
 </head>
