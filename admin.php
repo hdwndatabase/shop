@@ -26,11 +26,13 @@
         width:260px;
         height:37px;
         margin-bottom: 25px;
+        margin-top: 7px;
     }
     .form input[type="password"]{
         width:260px;
         height:37px;
         margin-bottom: 25px;
+        margin-top: 7px;
     }
     .form input[type="submit"]{
         margin-left: 9px;
@@ -57,6 +59,10 @@
         margin-left: 150px;
         font-size: 15px;
         text-decoration: none;
+    }
+    .form form div{
+        font-style: 微软雅黑;
+        font-size: 20px;
     }
     </style>
 </head>

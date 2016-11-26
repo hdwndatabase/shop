@@ -4,10 +4,30 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .header{
+            border-style: solid;
+            border-color: red;
+            height: 100px;
+        }
+        .top{
+            border-style: solid;
+            border-color: black;
+        }
+        .sth{
+            border-style: solid;
+            border-color: black;
+        }
+        .login_register{
+            border-color: orange;
+            border-style: solid; 
+        }
+    </style>
 </head>
 <body>
     <div class="header">
-        欢迎来到<a href="/shop/index.php">网上商城</a>,
+    <div class="top">
+        欢迎来到<a href="/shop/index.php">网上商城</a>,</div>
         <?php
         if (isset($_SESSION['user'])) {
             echo $_SESSION['user'];
@@ -22,8 +42,11 @@
         <?php
         } else {
         ?>
+        <div class="login_register">
+        
             请 <a href="/shop/login.php">登陆</a> 或
             <a href="/shop/register.php">注册</a>
+        </div>
         <?php
         }
         ?>
