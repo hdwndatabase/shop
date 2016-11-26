@@ -1,3 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+    *{
+        padding:0px;
+        margin:0px;
+        list-style: none;
+        text-decoration: none;
+    }
+    .all{
+        width:100%;
+        height:605px;
+        background: url(background.jpg) repeat;
+    }
+    .form{
+        width:25%;
+        height:320px;
+        padding-left: 30px;
+        padding-top: 40px;
+        position: relative;
+        left:80px;
+        top:60px;
+        border-color: red;
+        border-style: solid;
+    }
+    .form input[type="text"]{
+        width:260px;
+        height:37px;
+        margin-bottom: 25px;
+    }
+    .form input[type="password"]{
+        width:260px;
+        height:37px;
+        margin-bottom: 25px;
+        margin-left: 15px;
+    }
+    .form input[type="submit"]{
+        margin-left: 50px;
+        width:270px;
+        height: 42px;
+        border: 0;
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: middle;
+        line-height: 42px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        background: #f40;
+        border-radius: 3px;
+        cursor: pointer;
+        zoom: 1;
+        margin-bottom: 50px;
+    }
+    .form #wangjimima {
+        width:150px;
+        margin-left: 200px;
+        font-size: 15px;
+        text-decoration: none;
+        border-color: red;
+        border-style: solid;
+    }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
 <?php
     session_start();
     require_once './public/header_admin.php';
