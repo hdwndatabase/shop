@@ -1,3 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(128,128,128);
+        }
+        .header{
+            height: 150px;
+        }
+        .top{
+            width:100%;
+            height:33px;
+            background: url(/shop/public/images/background.gif) repeat-x;
+            font-size: 25px;
+            font-weight: 600;
+            padding-left: 70px;
+            text-align: middle;
+        }
+        .login_register{
+            margin-left: 70px;
+        }
+        .search input[type="text"]{
+            width:150px;
+            height:25px;
+            margin-left: 200px;
+        }
+        .search input[type="submit"]{
+            height: 30px;
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+
 <?php
 session_start();
 require_once 'conf/db.php';

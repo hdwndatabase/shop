@@ -1,7 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        #good{
+            width: 30%;
+            margin-left: 300px;
+            margin-top: 35px;
+            font-family: 楷体;
+            font-size: 20px;
+        }
+        #good input[type="text"]{
+            width:200px;
+            height: 25px;
+            margin-left: 10px;
+        }
+        #good select{
+            width:60px;
+            height: 25px;
+            margin-left: 15px;
+        }
+        #good input[type="submit"]{
+            width:60px;
+            height: 30px;
+            margin-left: 15px;
+            font-family: 楷体;
+            color:black;
+        }
+        #good input[type="file"]{
+            width:200px;
+            height: 20px;
+            font-family: 楷体;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
 <?php
     require_once '../../../../conf/db.php';
     if (@empty($_POST['good'])) {
         ?>
+        <div id="good">
         <form action="add.php?a=add" method="post" enctype="multipart/form-data">
             <div>商品名称<input type="text" name="good"></div><br>
             <div>商品价格<input type="text" name="price"></div><br>
@@ -31,7 +72,7 @@
             <div><input type="file" name="img"></div><br>
             <div><input type="submit" value="提交"></div>
         </form><br>
-        <a href="good.php">返回</a>
+        <p class="abc"><a href="good.php">返回</a></p></div>
         <?php
     } else {
         if ($_FILES['img']['name'] !== "") {
