@@ -11,7 +11,7 @@
                 <!--商品价格-->
                 <span class="price"><?php echo $good['price']; ?></span>
                 <!--加入购物车按钮-->
-                <a href="" class="addCart">加入购物车</a>
+                <a href="cart.php?id=<?php echo $good['id'];?>" class="addCart">加入购物车</a>
             </li>
         <?php endfor;?>
     </ul>
