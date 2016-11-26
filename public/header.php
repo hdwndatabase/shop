@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +7,7 @@
 </head>
 <body>
     <div class="header">
-        欢迎来到OnlineMall,
+        欢迎来到<a href="/shop/index.php">网上商城</a>,
         <?php
         if (isset($_SESSION['user'])) {
             echo $_SESSION['user'];

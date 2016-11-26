@@ -1,5 +1,3 @@
-<?php
-    require_once 'conf/db.php';
-    $result = $db->query("SELECT * from brand WHERE id=100");
-    var_dump($result);
-    echo "cooperate test";
+<?php if (mb_ereg('sort=[0-9]', $_SERVER['REQUEST_URI']) === false) { echo $_SERVER['REQUEST_URI'] . '&sort=' . addslashes($_GET['sort']); } else {
+    echo preg_replace('/sort=[0-9]/', 'sort=' . addslashes($_GET['sort']), $_SERVER['REQUEST_URI']);
+} ?>
