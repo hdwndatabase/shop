@@ -51,7 +51,7 @@
         background: #f40;
         border-radius: 3px;
         cursor: pointer;
-        zoom: 1;
+        zoom:  1;
         margin-bottom: 50px;
     }
     .form #wangjimima {
