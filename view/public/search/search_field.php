@@ -1,6 +1,6 @@
 
 <form action="search.php" method="get" class="search">
-    <div>
+    <div class="search">
         <?php
             require_once './view/public/fetch_cat.class.php';
             $fc = new Fetch_Cat($db);

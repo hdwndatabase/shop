@@ -4,25 +4,6 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="css/style.css">
-    <style type="text/css">
-        .header{
-            border-style: solid;
-            border-color: red;
-            height: 100px;
-        }
-        .top{
-            border-style: solid;
-            border-color: black;
-        }
-        .sth{
-            border-style: solid;
-            border-color: black;
-        }
-        .login_register{
-            border-color: orange;
-            border-style: solid; 
-        }
-    </style>
 </head>
 <body>
     <div class="header">
@@ -38,7 +19,7 @@
                 <a href="/shop/view/user/shopcart.php">我的购物车</a> |
                 <a href="/shop/view/user/userinfo.php">我的OnlineMall</a> |
                 <a href="/shop/logout.php">注销</a>
-            </div>
+            </div><br>
         <?php
         } else {
         ?>
