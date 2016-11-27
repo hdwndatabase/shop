@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="cart_detail">
-    <table class="cart">
+    <table class="cart" border="1px">
         <tr>
             <td>商品图片</td>
             <td>商品名称</td>
@@ -28,6 +28,7 @@
             <td class="price"><?php $result = $db->query("SELECT price FROM good WHERE id='$id'"); $result = $result->fetch_assoc(); $price = $result['price']; echo $price * $_SESSION['cart'][$i]['quantity']; ?></td>
         </tr>
         <?php endfor;?>
+        <tr> <td></td> <td></td> <td>总价</td> <td id="total_price"></td> </tr>
     </table>
 </div>
 </body>

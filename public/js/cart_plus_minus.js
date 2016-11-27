@@ -1,4 +1,13 @@
 $(function () {
+    // 计算总价
+    var prices = $('td.price');
+    var sum = 0;
+    prices.each(function () {
+        sum+=parseFloat($(this).html());
+    });
+    var $total = $('#total_price');
+    $total.html(sum);
+
    var minusBtn = $('button.minus');
    var plusBtn = $('button.plus');
    minusBtn.click(function () {
@@ -17,11 +26,14 @@ $(function () {
            data: data,
            dataType: 'json',
            success: function (price) {
-               if (parseInt($('span#num').html()>0)){
+               if (parseInt($('span#num').html())>0) {
                    $('span#num').html(parseInt($('span#num').html())-1);
                }
                var count = parseInt(tr1.find('input.num').val());
-               tr1.children('td.price').html(count*parseFloat(price));
+               var oldPrice = parseFloat(tr1.children('td.price').html());
+               var newPrice = count*parseFloat(price);
+               tr1.children('td.price').html(newPrice);
+               $total.html(parseFloat($total.html())-(oldPrice-newPrice));
                if (count == 0) {
                    var r = confirm("确认删除该商品吗?");
                    if (r === true) {
@@ -50,7 +62,10 @@ $(function () {
             success: function (price) {
                 $('span#num').html(parseInt($('span#num').html())+1);
                 var count = parseInt(tr2.find('input.num').val());
-                tr2.children('td.price').html(count*parseFloat(price));
+                var oldPrice = parseFloat(tr2.children('td.price').html());
+                var newPrice = count*parseFloat(price);
+                tr2.children('td.price').html(newPrice);
+                $total.html(parseFloat($total.html())-(oldPrice-newPrice));
             },
             error: function () {
                 alert("未知错误");
