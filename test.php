@@ -1,4 +1,9 @@
 <?php
-session_start();
-$_SESSION['cart'] = array();
-var_dump(isset($_SESSION['cart']));
+require_once 'conf/db.php';
+
+    session_start();
+    echo "<pre>";
+    foreach ($_SESSION['cart'] as $item) {
+    $arr = unserialize($item);
+    var_dump($item);
+    }

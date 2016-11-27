@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="background: url(/shop/public/images/bg1.jpg);">
 <div class="header" >

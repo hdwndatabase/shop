@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="header">
@@ -15,8 +14,19 @@
         ?>
             <div class="sth">
                 <a href="/shop/index.php">主页</a> |
-                <a href="/shop/view/user/order.php">我的订单</a> |
-                <a href="/shop/view/user/shopcart.php">我的购物车</a> |
+                <a href="/shop/order.php">我的订单</a> |
+                <a href="/shop/cart.php" class="shopcart">我的购物车(<span id="num"><?php
+                       if(isset($_SESSION['cart'])) {
+                           $quantity_col = array_column($_SESSION['cart'],'quantity');
+                           $sum = 0;
+                           foreach ($quantity_col as $quantity) {
+                               $sum+=$quantity;
+                           }
+                           echo $sum;
+                       } else {
+                           echo 0;
+                       }
+                       ?></span>)</a> |
                 <a href="/shop/view/user/userinfo.php">我的OnlineMall</a> |
                 <a href="/shop/logout.php">注销</a>
             </div><br>
@@ -27,6 +37,19 @@
         
             请 <a href="/shop/login.php">登陆</a> 或
             <a href="/shop/register.php">注册</a>
+
+            <a href="/shop/cart.php" class="shopcart">购物车(<span id="num"><?php
+                    if(isset($_SESSION['cart'])) {
+                        $quantity_col = array_column($_SESSION['cart'],'quantity');
+                        $sum = 0;
+                        foreach ($quantity_col as $quantity) {
+                            $sum+=$quantity;
+                        }
+                        echo $sum;
+                    } else {
+                        echo 0;
+                    }
+                    ?></span>)</a>
         </div>
         <?php
         }

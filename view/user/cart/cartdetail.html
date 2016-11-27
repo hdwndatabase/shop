@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="/shop/public/js/jquery-3.1.1.js"></script>
+    <script src="/shop/public/js/cart_plus_minus.js"></script>
+</head>
+<body>
+<div id="cart_detail">
+    <table class="cart">
+        <tr>
+            <td>商品图片</td>
+            <td>商品名称</td>
+            <td>商品数量</td>
+            <td>商品价格</td>
+        </tr>
+        <?php $num = count($_SESSION['cart']);
+            for ($i = 0; $i < $num; $i++):
+                $id = addslashes($_SESSION['cart'][$i]['id'])?>
+        <tr id="<?php echo $id;?>">
+            <td class="img"><img src="<?php echo $_SESSION['cart'][$i]['imgName'];?>" alt=""></td>
+            <td class="title"><?php echo $_SESSION['cart'][$i]['title'];?></td>
+            <td class="qty">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="<?php echo $_SESSION['cart'][$i]['quantity'];?>">
+                <button class="plus">+</button></td>
+            <td class="price"><?php $result = $db->query("SELECT price FROM good WHERE id='$id'"); $result = $result->fetch_assoc(); $price = $result['price']; echo $price * $_SESSION['cart'][$i]['quantity']; ?></td>
+        </tr>
+        <?php endfor;?>
+    </table>
+</div>
+</body>
+</html>

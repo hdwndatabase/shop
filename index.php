@@ -56,6 +56,9 @@
 </html>
 <?php
     session_start();
+    if(@empty($_SESSION['cart'])|count(@$_SESSION['cart'])===0) {
+        $_SESSION['cart'] = array();
+    }
     require_once 'conf/db.php';
     require_once 'public/header.php';
     require_once 'view/public/search/search_field.php';
