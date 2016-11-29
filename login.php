@@ -77,6 +77,7 @@
         height: 50px;
     }
     </style>
+    <script src="/shop/public/js/jquery-3.1.1.js"></script>
 </head>
 <body style="background: url(/shop/public/images/bg1.jpg);">
 
@@ -84,11 +85,11 @@
 </html>
 <?php
     session_start();
-    require_once './public/header.php';
-    if (isset($_SESSION['user'])) {
-        echo "<h2 class='msg'>欢迎你,".$_SESSION['user']."</h2>";
+require_once './conf/db.php';
+require_once './public/header.php';
+if (isset($_SESSION['user'])) {
+        echo "<script>history.go(-1)</script>";
     } else {
-        require_once './conf/db.php';
         if (!empty(@$_POST['username'] && !empty(@$_POST['password']))) {
             @$username = addslashes($_POST['username']);
             @$password = addslashes($_POST['password']);

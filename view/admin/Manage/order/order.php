@@ -1,37 +1,32 @@
 <script src="/shop/public/js/jquery-3.1.1.js"></script>
-<script src="/shop/public/js/receive.js"></script>
+<script src="/shop/public/js/send.js"></script>
 <?php
 session_start();
-require_once 'conf/db.php';
-require_once 'public/header.php';
+require_once '../../../../conf/db.php';
+require_once '../../../../public/header_admin.php';
 ?>
 <li>
-    <ul><a href="order.php">全部</a></ul>
-    <ul><a href="order.php?status=1">待发货</a></ul>
-    <ul><a href="order.php?status=2">已发货</a></ul>
-    <ul><a href="order.php?status=3">已收货</a></ul>
+    <ul><a href="/shop/view/admin/Manage/order/order.php">全部</a></ul>
+    <ul><a href="/shop/view/admin/Manage/order/order.php?status=1">待发货</a></ul>
+    <ul><a href="/shop/view/admin/Manage/order/order.php?status=2">已发货</a></ul>
+    <ul><a href="/shop/view/admin/Manage/order/order.php?status=3">已收货</a></ul>
 </li>
 <?php
 
-//获取用户id
-$userid = $db->query("SELECT id FROM user WHERE name='" . $_SESSION['user'] . "'");
-$userid = $userid->fetch_assoc();
-$userid = $userid['id'];
-
-$query_str = "SELECT * FROM `order` WHERE user_id='" . $userid . "'";
+$query_str = "SELECT * FROM `order`";
 $appendix = '';
 
 @$status = addslashes($_GET['status']);
 if (@isset($status)) {
     switch (@$status) {
         case '1':
-            $appendix = " AND state='1'";
+            $appendix = " WHERE state='1'";
             break;
         case '2':
-            $appendix = " AND state='2'";
+            $appendix = " WHERE state='2'";
             break;
         case '3':
-            $appendix = " AND state='3'";
+            $appendix = " WHERE state='3'";
             break;
         default:
             $appendix = '';
@@ -82,11 +77,11 @@ while ($order = $result->fetch_assoc()) {
             <td colspan="2"><?php echo $order['name'] . "  (收)   " . $order['phone']; ?>
                 <br><?php echo $order['addr'] . "   " . $order['zipcode']; ?></td>
         </tr>
-        <tr>
+        <tr class="send">
             <td colspan="2">
                 <?php
-                if($order['state']=='2') {
-                    echo "<button class='recv' id='".$order['id']."'>确认收货"."</button>";
+                if($order['state']=='1') {
+                    echo "<button class='send' id='".$order['id']."'>发货"."</button>";
                 } else if($order['state']=='3') {
                     echo "<button class='del' id='".$order['id']."'>删除订单"."</button>";
                 }
@@ -97,5 +92,3 @@ while ($order = $result->fetch_assoc()) {
     <?php
 }
 ?>
-
-

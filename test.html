@@ -6,19 +6,24 @@
     <script src="/shop/public/js/jquery-3.1.1.js"></script>
 </head>
 <body>
-<table>
-    <tr>
-        <td class="price">1</td>
-        <td class="price">2</td>
-        <td class="price">3</td>
-        <td class="price">4</td>
-        <td id="total"></td>
-    </tr>
-
-</table>
+<button id="link">aaaaaaaaaa</button>
 <script>
     $(function () {
+        $('#link').click(function () {
+			$.ajax({
+			    type: 'post',
+				url: '/shop/test.php',
+				data: {a:'a'},
+				dataType: 'json',
+				success: function (msg) {
+					console.log(msg)
+                },
+				error: function () {
 
+                }
+			});
+			location.href = '/shop/login.php'
+        });
     })
 </script>
 </body>

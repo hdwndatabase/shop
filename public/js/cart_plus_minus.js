@@ -37,8 +37,18 @@ $(function () {
                if (count == 0) {
                    var r = confirm("确认删除该商品吗?");
                    if (r === true) {
-                       tr1.remove();
-                       location.reload();
+                       $.ajax({
+                           type: 'post',
+                           url: '/shop/view/user/cart/CartZero.php',
+                           data: {id: tr1.attr('id'),flag:'y'},
+                           dataType: 'json',
+                           success: function () {
+                               location.reload();
+                           },
+                           error: function () {
+                               alert('error')
+                           }
+                       })
                    }
                }
            },

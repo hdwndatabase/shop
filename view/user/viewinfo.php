@@ -1,11 +1,11 @@
 <?php
-    session_start();
-    require_once '../../public/header.php';
-    require_once '../../conf/db.php';
+session_start();
+require_once '../../conf/db.php';
+require_once '../../public/header.php';
 
-    $name = $_SESSION['user'];
-    $result = $db->query("SELECT name,addr,phone,email,zipcode FROM user WHERE name='$name'");
-    $elems = $result->fetch_assoc();
+$name = $_SESSION['user'];
+$result = $db->query("SELECT name,addr,phone,email,zipcode FROM user WHERE name='$name'");
+$elems = $result->fetch_assoc();
 ?>
 <h2 class="h">用户个人信息</h2>
 <table border="1px" class="info">

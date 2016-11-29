@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once '../../../../conf/db.php';
     require_once '../../../../public/header.php';
 ?>
 <h2>原密码错误，请重新输入</h2>

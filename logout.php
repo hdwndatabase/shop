@@ -1,5 +1,5 @@
 <?php
     session_start();
-    $_SESSION = array();
+    $_SESSION['user'] = array();
     session_destroy();
     header('Location: /shop');

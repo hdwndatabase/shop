@@ -62,3 +62,4 @@
     require_once 'conf/db.php';
     require_once 'public/header.php';
     require_once 'view/public/search/search_field.php';
+    require_once 'view/user/display_index.php';

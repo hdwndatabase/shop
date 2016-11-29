@@ -20,6 +20,7 @@
                         <li><a href="/shop/view/admin/Manage/good/good.php">商品管理</a></li>
                         <li><a href="/shop/view/admin/Manage/category/category.php">分类管理</a></li>
                         <li><a href="/shop/view/admin/Manage/brand/brand.php">品牌管理</a></li>
+                        <li><a href="/shop/view/admin/Manage/order/order.php">订单管理</a></li>
                         <li><a href="/shop/logout.php">注销</a></li>
                     </ul>
                 </div>
