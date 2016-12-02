@@ -3,30 +3,19 @@
 <head>
     <title></title>
     <style type="text/css">
-        *{
-            margin:0px;
-            padding:0px;
-        }
-        a{
-            text-decoration: none;
-            color: rgb(128,128,128);
-        }
-        .header{
-            height: 150px;
-        }
-        .top{
-            width:100%;
-            height:33px;
-            background: url(/shop/public/images/background.gif) repeat-x;
-            font-size: 25px;
-            font-weight: 600;
-            padding-left: 70px;
-            text-align: middle;
-        }
-        .login_register{
-            margin-left: 70px;
-        }
+    *{
+        padding:0px;
+        margin:0px;
+        list-style: none;
+        text-decoration: none;
+    }
+    .all{
+        width:100%;
+        height:605px;
+        background: url(background.jpg) repeat;
+    }
     .form{
+        width:400px;
         height:350px;
         padding-left: 30px;
         padding-top: 40px;
@@ -34,47 +23,50 @@
         left:80px;
         top:60px;
     }
+    .form .pwd input[type="password"]{
+        margin: 18px;
+    }
     .form input[type="text"]{
         width:260px;
         height:37px;
-        margin-bottom: 0px;
+        margin-bottom: 25px;
         margin-top: 7px;
     }
     .form input[type="password"]{
         width:260px;
         height:37px;
-        margin-bottom: 5px;
+        margin-bottom: 25px;
         margin-top: 7px;
     }
     .form input[type="submit"]{
-        width:270px;
-        height:42px;
-        vertical-align: middle;
-        line-height:41px;
-        font-size:17px;
-        margin-left: 0px;
+        margin-left: 64px;
         width:270px;
         height: 42px;
+        border: 0;
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: middle;
+        line-height: 42px;
+        font-size: 16px;
         font-weight: 700;
         color: #fff;
         background: #f40;
         border-radius: 3px;
         cursor: pointer;
         zoom:  1;
+        margin-top: 13px;
         margin-bottom: 50px;
         text-align: center;
     }
     .form #wangjimima {
-        float: right;
         width:150px;
         margin-left: 150px;
         font-size: 15px;
         text-decoration: none;
-        margin-top: 10px;
     }
-    .form .submit{
-        width:280px;
-        height: 50px;
+    .form form div{
+        font-style: 微软雅黑;
+        font-size: 20px;
     }
     </style>
     <script src="/shop/public/js/jquery-3.1.1.js"></script>

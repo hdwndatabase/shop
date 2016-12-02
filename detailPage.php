@@ -22,11 +22,40 @@ $good = $result->fetch_assoc();
     <script src="/shop/public/js/jquery-3.1.1.js"></script>
     <script src="/shop/public/js/num_button.js"></script>
     <script src="/shop/public/js/addcart_d.js"></script>
+    <style type="text/css">
+        .good_main #pic{
+            margin-left: 80px;
+        }
+        .info{
+            padding-left: 140px;
+            line-height: 40px;
+            font-family: 微软雅黑;
+        }
+        .info #plus{
+            width:23px;
+            height:23px;
+        }
+        .info #minus{
+            width:23px;
+            height:23px;
+        }
+        .info #num{
+            width:40px;
+            height:20px;
+        }
+        #addCart{
+            width:100px;
+            height:30px;
+            font-family: 楷体;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    </style>
 </head>
-<body>
+<body style="background: url(/shop/public/images/bg1.jpg);">
 <div class="good_main">
     <!--商品图片-->
-    <div class="pic left">
+    <div id="pic" class="pic left">
         <img src="/shop/public/images/<?php echo $good['img_name'];?>" alt="<?php echo $good['brandName']." ".$good['goodName'];?>">
     </div>
     <!--商品信息-->

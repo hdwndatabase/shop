@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        img{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
 <?php
 $result = $db->query("SELECT * FROM category");
 ?>

@@ -5,8 +5,35 @@
     <title></title>
     <script src="/shop/public/js/jquery-3.1.1.js"></script>
     <script src="/shop/public/js/cart_plus_minus.js"></script>
+    <style type="text/css">
+        a{
+            color:black;
+        }
+        #cart_detail{
+            text-align: center;
+            padding-left: 240px;
+            font-family: 楷体;
+            font-weight:600;
+        }
+        .plus{
+            width:23px;
+            height:23px;
+        }
+        .minus{
+            width:23px;
+            height:23px;
+        }
+        .num{
+            width:40px;
+            height:20px;
+        }
+        img{
+            width:600px;
+            height:500px;
+        }
+    </style>
 </head>
-<body>
+<body style="background: url(/shop/public/images/bg1.jpg);">
 <div id="cart_detail">
     <table class="cart" border="1px">
         <tr>

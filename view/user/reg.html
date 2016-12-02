@@ -4,16 +4,55 @@
     <meta charset="utf-8">
     <title>注册</title>
     <link rel="stylesheet" href="./public/css/style.css">
+    <style type="text/css">
+        #form{
+            width:400px;
+            height:350px;
+            padding-left: 30px;
+            margin-left: 100px;
+            margin-top: 30px;
+            font-family: 楷体;
+            font-size: 20px; 
+        }
+        #form div{
+            padding-bottom: 15px;
+        }
+
+        #form .user input[type="text"]{
+            margin-left:10px;
+            height: 30px;
+            width:250px;
+        }
+        #form .passwd input[type="password"]{
+            margin-left:30px;
+            height: 30px;
+            width:250px;
+        }
+        #form .telephone input[type="text"]{
+            margin-left:10px;
+            height: 30px;
+            width:250px;
+        }
+        #form .mail input[type="text"]{
+            margin-left:30px;
+            height: 30px;
+            width:250px;
+        }
+        #form .submit input[type="submit"]{
+        margin-left:60px;
+        margin-top: 30px;
+        }
+    </style>
     <script></script>
 </head>
 <body>
-<div class="form" onclick="reg_form">
+<div id="form" class="form" onclick="reg_form">
     <form action="/shop/register.php" method="post">
         <div class="user">用户名<input type="text" name="username" id="username" placeholder="用户名唯一，一旦填写不可修改"></div>
         <div class="passwd">密码<input type="password" name="pwd" id="pwd"></div>
         <div class="telephone">手机号<input type="text" name="tel" id="tel"></div>
         <div class="mail">邮箱<input type="text" name="email" id="email"></div>
-        <div class="submit"><input type="submit" value="注册"></div>
+        <div class="submit"><input style="border-style: none;" type="submit" value="注册"></div>
     </form>
 </div>
 </body>

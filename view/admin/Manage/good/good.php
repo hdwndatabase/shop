@@ -25,7 +25,7 @@
             height:33px;
         }
         .sth{
-            width:1200px;
+            width:1202px;
             height:49px;
             margin:0 auto;
         }
@@ -43,13 +43,13 @@
             font-size:17px;
         }
         .sth .list{
-            width:940px;
+            width:942px;
             height:49px;
             float:left;
             list-style: none;
         }
         .sth .list li a{
-            width:188px;
+            width:157px;
             height:49px;
             float:left;
             line-height: 49px;

@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+
+</body>
+</html>
 <?php
 session_start();
 require_once 'conf/db.php';

@@ -15,12 +15,16 @@
         background: url(background.jpg) repeat;
     }
     .form{
+        width:400px;
         height:350px;
         padding-left: 30px;
         padding-top: 40px;
         position: relative;
         left:80px;
         top:60px;
+    }
+    .form .pwd input[type="password"]{
+        margin: 18px;
     }
     .form input[type="text"]{
         width:260px;
@@ -35,7 +39,7 @@
         margin-top: 7px;
     }
     .form input[type="submit"]{
-        margin-left: 9px;
+        margin-left: 64px;
         width:270px;
         height: 42px;
         border: 0;
@@ -50,11 +54,11 @@
         border-radius: 3px;
         cursor: pointer;
         zoom:  1;
+        margin-top: 13px;
         margin-bottom: 50px;
         text-align: center;
     }
     .form #wangjimima {
-        float: right;
         width:150px;
         margin-left: 150px;
         font-size: 15px;
@@ -104,7 +108,7 @@
             height:33px;
         }
         .sth{
-            width:1200px;
+            width:1202px;
             height:49px;
             margin:0 auto;
         }
@@ -122,12 +126,12 @@
             font-size:17px;
         }
         .sth .list{
-            width:940px;
+            width:942px;
             height:49px;
             float:left;
         }
         .sth .list li a{
-            width:188px;
+            width:157px;
             height:49px;
             float:left;
             line-height: 49px;

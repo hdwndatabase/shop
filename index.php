@@ -12,7 +12,7 @@
             color: rgb(128,128,128);
         }
         .header{
-            height: 150px;
+            height: 80px;
         }
         .sth{
             width:940px;
