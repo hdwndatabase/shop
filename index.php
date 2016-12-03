@@ -48,6 +48,14 @@
         .search{
         	padding-left: 100px;
         }
+        .each_cat {
+            display: block;
+        }
+        .each_good {
+            display: block;
+            float: left;
+            margin: 40px;
+        }
     </style>
 </head>
 <body style="background: url(/shop/public/images/bg1.jpg);">
