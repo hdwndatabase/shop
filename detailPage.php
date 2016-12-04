@@ -24,10 +24,11 @@ $good = $result->fetch_assoc();
     <script src="/shop/public/js/addcart_d.js"></script>
     <style type="text/css">
         .good_main #pic{
-            margin-left: 80px;
+            margin-left: 200px;
+            margin-top: 20px;
         }
         .info{
-            padding-left: 140px;
+            padding-left: 200px;
             line-height: 40px;
             font-family: 微软雅黑;
         }
@@ -49,6 +50,9 @@ $good = $result->fetch_assoc();
             font-family: 楷体;
             font-weight: 700;
             font-size: 16px;
+        }
+        .search{
+            margin-top: 50px;
         }
     </style>
 </head>

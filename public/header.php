@@ -61,15 +61,15 @@
         echo $_SESSION['user'];
         ?>
         <div class="sth">
-            <a href="/shop/index.php">主页</a> |
-            <a href="/shop/order.php">我的订单</a> |
+            <a href="/shop/index.php">主页</a> <!-- | -->
+            <a href="/shop/order.php">我的订单</a> <!-- | -->
             <a href="/shop/cart.php" class="shopcart">我的购物车(<span id="num"><?php
                     $name = $_SESSION['user'];
                     $result = $db->query("SELECT sum(good_count) AS total FROM user INNER JOIN shopcart ON user.id = shopcart.user_id WHERE name='$name'");
                     $result = $result->fetch_assoc();
                     echo $result['total']===null ? 0:$result['total'];
-                    ?></span>)</a> |
-            <a href="/shop/view/user/userinfo.php">我的OnlineMall</a> |
+                    ?></span>)</a> <!-- | -->
+            <a href="/shop/view/user/userinfo.php">我的OnlineMall</a> <!-- | -->
             <a href="/shop/logout.php">注销</a>
         </div><br>
         <?php
@@ -97,7 +97,7 @@
     }
     ?>
 
-    <hr>
+    <!-- <hr> -->
 </div>
 </body>
 </html>

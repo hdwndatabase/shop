@@ -6,9 +6,13 @@
 		li{
 			list-style: none;
 		}
+        .empty{
+            margin-top: 50px;
+            text-align: center;
+        }
 	</style>
 </head>
-<body>
+<body style="background: url(/shop/public/images/bg1.jpg);">
 
 </body>
 </html>

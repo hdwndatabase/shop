@@ -75,7 +75,7 @@
         #ul .ul ul{
             margin-bottom: 15px;
         }
-        #ul li{
+        #ul li{ 
             list-style: none;
             margin:20px;
         }
@@ -144,6 +144,10 @@
         .sth .list li a:hover{
             background: rgb(229,230,230);
         }
+        .table{
+            padding-left: 350px;
+            padding-top: 25px;
+        }
     </style>
 </head>
 <body>
@@ -192,6 +196,7 @@ if (@isset($status)) {
 $result = $db->query($query_str . $appendix);
 while ($order = $result->fetch_assoc()) {
     ?>
+    <div class="table">
     <table border="1px">
         <tr>
             <td colspan="2">订单号:<?php echo $order['id'] . "  "; ?> 下单时间:<?php echo $order['datetime'] . "  "; ?>
@@ -243,6 +248,7 @@ while ($order = $result->fetch_assoc()) {
             </td>
         </tr>
     </table>
+    </div>
     <?php
 }
 ?>

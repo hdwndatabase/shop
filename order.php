@@ -1,3 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        #ul{
+            list-style: none;
+            width:250px;
+            height: 150px;
+            position: absolute;
+            left:120px;
+            top:120px;
+        }
+        #ul ul{
+            list-style: none;
+            margin:13px;
+        }
+        #ul ul a{
+            text-decoration: none;
+            font-size: 20px;
+            color:#660099;
+            font-weight: 600;
+        }
+        #ul a:hover{
+            color: rgb(128,128,128);
+        }
+        .table{
+            margin-top: 30px;
+            margin-left: 350px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body style="background: url(/shop/public/images/bg1.jpg);">
+
+</body>
+</html>
 <script src="/shop/public/js/jquery-3.1.1.js"></script>
 <script src="/shop/public/js/receive.js"></script>
 <?php
@@ -5,7 +42,7 @@ session_start();
 require_once 'conf/db.php';
 require_once 'public/header.php';
 ?>
-<li>
+<li id="ul">
     <ul><a href="order.php">全部</a></ul>
     <ul><a href="order.php?status=1">待发货</a></ul>
     <ul><a href="order.php?status=2">已发货</a></ul>
@@ -43,6 +80,7 @@ if (@isset($status)) {
 $result = $db->query($query_str . $appendix);
 while ($order = $result->fetch_assoc()) {
     ?>
+    <div class="table">
     <table border="1px">
         <tr>
             <td colspan="2">订单号:<?php echo $order['id'] . "  "; ?> 下单时间:<?php echo $order['datetime'] . "  "; ?>
@@ -93,7 +131,7 @@ while ($order = $result->fetch_assoc()) {
                 ?>
             </td>
         </tr>
-    </table>
+    </table></div>
     <?php
 }
 ?>

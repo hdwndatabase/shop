@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .h{
+            margin-top: 50px;
+            padding-left: 168px;
+        }
+        .table{
+            margin-top: 30px;
+            margin-left: 168px;
+            line-height: 30px;
+        }
+        .table td{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body style="background: url(/shop/public/images/bg1.jpg);">
+
+</body>
+</html>
 <?php
 session_start();
 require_once '../../conf/db.php';
@@ -8,6 +32,7 @@ $result = $db->query("SELECT name,addr,phone,email,zipcode FROM user WHERE name=
 $elems = $result->fetch_assoc();
 ?>
 <h2 class="h">用户个人信息</h2>
+<div class="table">
 <table border="1px" class="info">
     <tr>
         <td>用户名</td>
@@ -30,3 +55,4 @@ $elems = $result->fetch_assoc();
         <td><?php echo $elems['zipcode'] ?></td>
     </tr>
 </table>
+</div>

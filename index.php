@@ -50,11 +50,35 @@
         }
         .each_cat {
             display: block;
+            height:213px;
+            width:1400px;
+            margin:10px;
         }
         .each_good {
             display: block;
             float: left;
             margin: 40px;
+        }
+        .wrap{
+            height:1100px;
+            width:1400px;
+        }
+        .outer{
+            height:1100px;
+            width:1400px;
+            margin-left: 20px;
+        }
+        .left{
+            line-height: 22px;
+            font-size:18px ;
+            font-family: "Microsoft YaHei";
+            font-weight: ;
+            color:black;
+            padding-left: 40px;
+            margin-bottom: -20px;
+        }
+        .search{
+            margin-top: 50px;
         }
     </style>
 </head>

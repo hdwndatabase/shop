@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .search{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body style="background: url(/shop/public/images/bg1.jpg);">
+
+</body>
+</html>
 <script src="/shop/public/js/jquery-3.1.1.js"></script>
 <script src="/shop/public/js/addcart.js"></script>
 <?php

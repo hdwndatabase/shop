@@ -45,8 +45,14 @@ $db->query("DELETE FROM shopcart WHERE user_id='$userid'") or die("清空购物�
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<style type="text/css">
+		h2{
+			margin-top: 50px;
+			margin-left: 200px;
+		}
+	</style>
 </head>
-<body>
+<body style="background: url(/shop/public/images/bg1.jpg);">
     <h2>订单提交成功！你的包裹将尽快发货</h2>
 </body>
 </html>

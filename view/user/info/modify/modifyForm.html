@@ -3,51 +3,91 @@
 <head>
     <meta charset="utf-8">
     <title>用户个人资料修改</title>
+    <style type="text/css">
+        .msg{
+            margin-top: 50px;
+            padding-left: 300px;
+        }
+        .form1{
+            width:300px;
+            margin-left:300px;
+            margin-top: 20px;
+        }
+        .form1 h3{
+            margin-bottom: 5px;
+        }
+        .pwd{
+            margin-bottom: 8px;
+        }
+        .pwd input{
+            width:160px;
+            height:23px;
+        }
+        .tel{
+            margin-bottom: 8px;
+        }
+        .tel input{
+            width:200px;
+            height:25px;
+            margin-top:10px;
+        }
+        .add input{
+            width:200px;
+            height:25px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .submit input{
+            width:45px;
+            height:25px;
+            margin-left:10px;
+        }
+    </style>
 </head>
-<body>
+<body style="background: url(/shop/public/images/bg1.jpg);">
 <?php require_once '../../../../public/header.php'; ?>
-<h2>修改个人资料</h2>
+<h2 class="msg">修改个人资料</h2>
 
 
 <div class="form1">
     <h3>修改密码</h3>
     <form action="process.php" method="post">
-        <div>旧密码<input type="password" name="old"></div>
-        <div>新密码<input type="password" name="new"></div>
+        <div class="pwd">旧密码<input type="password" name="old"></div>
+        <div class="pwd">新密码<input type="password" name="new"></div>
         <input type="hidden" name="pwd" value="pwd">
-        <div><input type="submit" value="修改"></div>
+        <div class="submit"><input type="submit" value="修改"></div>
     </form>
 </div>
 <div class="form1">
     <h3>修改手机号码</h3>
     <form action="process.php" method="post">
-        <div>请输入新的手机号码<input type="tel" name="tel"></div>
+        <div class="tel">请输入新的手机号码<input type="tel" name="tel"></div>
         <input type="hidden" name="tel1" value="tel1">
-        <div><input type="submit" value="修改"></div>
+        <div class="submit"><input type="submit" value="修改"></div>
     </form>
 </div>
 <div class="form1">
     <h3>设置默认地址</h3>
     <form action="process.php" method="post">
-        <div><input type="text" name="addr"></div>
+        <div class="add"><input type="text" name="addr"></div>
         <input type="hidden" name="addr1" value="addr1">
-        <div><input type="submit" value="设置"></div>
+        <div class="submit"><input type="submit" value="设置"></div>
     </form>
 </div>
 <div class="form1">
     <h3>设置邮箱</h3>
     <form action="process.php" method="post">
-        <div><input type="email" name="email"></div>
+        <div class="add"><input type="email" name="email"></div>
         <input type="hidden" name="email1" value="email1">
-        <div><input type="submit" value="设置"></div>
+        <div class="submit"><input type="submit" value="设置"></div>
     </form>
 </div>
 <div class="form1">
     <h3>设置邮编</h3>
     <form action="process.php" method="post">
-        <div><input type="text" name="zipcode"></div>
+        <div class="add"><input type="text" name="zipcode"></div>
         <input type="hidden" name="zipcode1" value="zipcode1">
-        <div><input type="submit" value="设置"></div>
+        <div class="submit"><input type="submit" value="设置"></div>
     </form>
 </div>
 </body>
