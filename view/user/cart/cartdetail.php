@@ -14,6 +14,8 @@
             padding-left: 240px;
             font-family: 楷体;
             font-weight:600;
+            width:800px;
+            margin-top: 50px;
         }
         .plus{
             width:23px;
@@ -28,14 +30,38 @@
             height:20px;
         }
         img{
-            width:600px;
-            height:500px;
+            width:400px;
+            height:300px;
+        }
+        .jiesuan{
+            float: right;
+            margin-right: 60px;
+            width:180px;
+            height: 42px;
+            border: 0;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+            line-height: 42px;
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            background: #f40;
+            border-radius: 3px;
+            cursor: pointer;
+            zoom:  1;
+            margin-top: 13px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        table{
+            border-color: white;
         }
     </style>
 </head>
 <body style="background: url(/shop/public/images/bg1.jpg);">
 <div id="cart_detail">
-    <table class="cart" border="1px">
+    <table class="cart" border="1px" cellspacing="0" cellpadding="0">
         <tr>
             <td>商品图片</td>
             <td>商品名称</td>
