@@ -165,7 +165,7 @@
             $row = $result->fetch_assoc();
             if ($result->num_rows) {
                 $_SESSION['admin'] = $row['name'];
-                header('Location: ./admin.php');
+                echo "<script>location.reload();</script>";
             } else {
                 echo "<script>alert('登录失败！请重新填写信息')</script>";
             }

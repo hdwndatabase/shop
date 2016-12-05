@@ -33,6 +33,7 @@
         }
         .sth a:hover{
             background: rgb(229,230,230);
+            
         }
         .login_register{
             margin-left: 70px;
