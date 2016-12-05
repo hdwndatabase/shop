@@ -55,12 +55,12 @@
 <div class="header">
     <div class="top">
         欢迎来到<a href="/shop/index.php">网上商城</a>,
-    </div>
     <?php
     if (isset($_SESSION['user'])) {
         echo $_SESSION['user'];
         ?>
-        <div class="sth">
+    </div>
+    <div class="sth">
             <a href="/shop/index.php">主页</a> <!-- | -->
             <a href="/shop/order.php">我的订单</a> <!-- | -->
             <a href="/shop/cart.php" class="shopcart">我的购物车(<span id="num"><?php

@@ -43,6 +43,7 @@ $(function () {
                            data: {id: tr1.attr('id'),flag:'y'},
                            dataType: 'json',
                            success: function () {
+                               tr1.remove();
                                location.reload();
                            },
                            error: function () {
