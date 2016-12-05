@@ -1,3 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .form{
+            width:300px;
+            height:500px;
+            margin-left: 330px;
+            margin-top: 40px;
+            font-size: 20px;
+            font-family: 楷体;
+            font-weight: 600;
+        }
+        .form input{
+            width:200px;
+            height:23px;
+            margin-bottom: 10px;
+        }
+        select{
+            width:60px;
+            height:23px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"]{
+            width:80px;
+            height:30px;
+            margin-left: 90px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+<div class="form">
 <form action="modify.php?m=yes&id=<?php echo $id; ?>" method="post">
     <div>名称 <input type="text" name="name" value="<?php echo $old['name']; ?>"></div>
     <div>价格 <input type="text" name="price" value="<?php echo $old['price']; ?>"></div>
@@ -37,3 +74,4 @@
         <div><input type="submit" value="提交修改"></div>
     </div>
 </form>
+</div>
