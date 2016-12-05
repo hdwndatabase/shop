@@ -69,7 +69,7 @@
                     $result = $result->fetch_assoc();
                     echo $result['total']===null ? 0:$result['total'];
                     ?></span>)</a> <!-- | -->
-            <a href="/shop/view/user/userinfo.php">我的OnlineMall</a> <!-- | -->
+            <a href="/shop/view/user/userinfo.php">我的主页</a> <!-- | -->
             <a href="/shop/logout.php">注销</a>
         </div><br>
         <?php
