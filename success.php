@@ -34,6 +34,7 @@ while ($r = $result->fetch_assoc()) {
     $good_count = $r['good_count'];
     $price = $r['price'];
 
+    $db->query("UPDATE good SET sale_count=sale_count+'$good_count',store_count=store_count-'$good_count' WHERE id='$good_id'");
     $db->query("INSERT INTO order_detail VALUE ('$id','$good_id','$good_count','$price')") or die("订单处理错误");
 }
 
