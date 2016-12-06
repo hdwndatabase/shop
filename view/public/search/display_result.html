@@ -5,6 +5,35 @@
 	<title></title>
     <!--<script src="/shop/public/js/jquery-3.1.1.js"></script>-->
     <!--<script src="/shop/public/js/addcart.js"></script>-->
+    <style type="text/css">
+        .wrap{
+        }
+        img{
+            width:400px;
+            height:300px;
+        }
+        .per{
+            width:410px;
+            float:left;
+            margin-left: 25px;
+        }
+        .title{
+            font-weight: 600;
+            font-family: 楷体;
+            font-size: 18px;
+        }
+        .title a{
+            color:black;
+        }
+        .price{
+            margin-left: 10px;
+            line-height: 30px;
+        }
+        .addCart{
+            width:80px;
+            height:25px;
+        }
+    </style>
 </head>
 <body>
     <!--显示搜索出来的商品-->
@@ -12,7 +41,7 @@
         <ul class="goods">
             <?php for($i=0;$i<$result->num_rows;$i++):?>
             <?php $good = $result->fetch_assoc(); ?>
-            <li id="<?php echo $good['id']; ?>">
+            <li class="per" id="<?php echo $good['id']; ?>">
                 <!--商品图片-->
                 <a href="/shop/detailPage.php?goodId=<?php echo $good['id']?>" class="img"><img src="/shop/public/images/<?php echo $good['img_name']; ?>" class="img"></a>
                 <!--商品标题-->
